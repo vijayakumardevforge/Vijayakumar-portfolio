@@ -1,4 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Hamburger Menu Logic
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksItems = document.querySelectorAll('.nav-links a');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        navLinksItems.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        const themeToggle = document.querySelector('.theme-switch input[type="checkbox"]');
+        if (themeToggle) {
+            themeToggle.addEventListener('change', () => {
+                setTimeout(() => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }, 400); // 400ms delay to let the toggle animation finish
+            });
+        }
+    }
+
     // Theme Toggle Logic
     const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
     const currentTheme = localStorage.getItem('theme');

@@ -46,9 +46,15 @@ html {
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
+    font-size: 16px;
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
     overflow-x: hidden;
+}
+
+img, picture, video, canvas, svg {
+    max-width: 100%;
+    height: auto;
 }
 
 ul {
@@ -70,6 +76,7 @@ h1, h2, h3, h4 {
 
 .highlight {
     color: var(--highlight);
+    white-space: nowrap;
 }
 
 .mt-4 { margin-top: 1.5rem; }
@@ -112,10 +119,6 @@ h1, h2, h3, h4 {
 
 /* Theme Switch */
 .theme-switch-wrapper {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
     display: flex;
     align-items: center;
 }
@@ -205,15 +208,44 @@ input:checked + .slider:before {
 .nav-links {
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-links a {
     font-weight: 500;
     color: var(--text-color);
+    padding: 0.5rem;
 }
 
 .nav-links a:hover {
     color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 101;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Sections */
@@ -596,15 +628,72 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
     .nav-links {
-        display: none; /* simple hidden nav for mobile */
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        width: 100%;
+        height: calc(100vh - 60px);
+        text-align: center;
+        transition: left 0.3s ease;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        justify-content: flex-start;
+        padding-top: 2rem;
+        z-index: 99;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.25rem;
+        display: block;
+        padding: 1rem;
+    }
+
+    .theme-switch-item {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .skills-container, .projects-grid {
+        grid-template-columns: 1fr;
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .section {
         padding: 4rem 1.5rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        text-align: center;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
     }
 }
