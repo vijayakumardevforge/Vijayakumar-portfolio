@@ -31,7 +31,6 @@
 ### ⚙️ Frameworks & Tools
 <p align="center">
   <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot" />
-  <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white" alt="Hibernate" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
   <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white" alt="IntelliJ" />
   <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white" alt="Postman" />
@@ -43,7 +42,7 @@
 
 ### 🧠 [AI-Powered Software Architecture Generator](https://project-idea-generator-bvbt.onrender.com/)
 A full-stack web application that generates customized software project ideas, database schemas, API endpoint suggestions, and learning roadmaps based on user preferences.
-- **Backend:** Java, Spring Boot, Hibernate, PostgreSQL
+- **Backend:** Java, Spring Boot, PostgreSQL
 - **Frontend:** HTML, CSS, Vanilla JavaScript
 - **Integration:** Hugging Face AI Models, REST APIs
 
