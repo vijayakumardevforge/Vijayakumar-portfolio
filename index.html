@@ -7,7 +7,7 @@
     <title>Vijayakumar M | Backend Developer</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -23,6 +23,7 @@
             <ul class="nav-links">
                 <li><a href="#hero">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#terminal">Console</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
@@ -108,8 +109,58 @@
         </div>
     </section>
 
+    <!-- Interactive Java Terminal Section -->
+    <section id="terminal" class="section">
+        <h2 class="section-title fade-in">Java Backend Terminal</h2>
+        <p class="terminal-intro fade-in">Experience my backend skills interactively. Click any command below or type in the console prompt.</p>
+        <div class="terminal-wrapper fade-in">
+            <div class="terminal-window">
+                <div class="terminal-titlebar">
+                    <div class="terminal-buttons">
+                        <span class="term-btn term-red"></span>
+                        <span class="term-btn term-yellow"></span>
+                        <span class="term-btn term-green"></span>
+                    </div>
+                    <div class="terminal-title">
+                        <i class="fas fa-terminal"></i> vijay@spring-boot<span class="hide-mobile">-server: ~ /portfolio-console</span><span class="show-mobile">:~</span>
+                    </div>
+                    <div class="terminal-status"><span class="status-dot"></span> ONLINE<span class="hide-mobile"> (Port 8080)</span></div>
+                </div>
+                
+                <div class="terminal-body" id="terminalBody">
+                    <div class="term-line term-welcome"><i class="fas fa-star"></i> Welcome to Vijayakumar's Interactive Backend Console v2.6.0</div>
+                    <div class="term-line term-sub">Type <span class="term-cmd">help</span> or click the buttons below to interact with the simulated Spring Boot backend server.</div>
+                    <div class="term-line"><br></div>
+                    <div class="term-line"><span class="term-prompt">vijay@dev-forge:~$</span> <span class="term-typed">java -version</span></div>
+                    <div class="term-line term-output">openjdk version "21.0.2" 2024-01-16 LTS<br>OpenJDK Runtime Environment (build 21.0.2+13-LTS)<br>Spring Boot v3.2.4 Active Engine Ready.</div>
+                    <div class="term-line"><br></div>
+                    <!-- Output history will be injected here -->
+                    <div id="termHistory"></div>
+                    <!-- Active input line -->
+                    <div class="term-input-line">
+                        <span class="term-prompt">vijay@dev-forge:~$</span>
+                        <input type="text" id="termInput" class="term-input" placeholder="Type a command (e.g. 'help', 'skills', 'projects', 'contact')..." autocomplete="off" spellcheck="false">
+                    </div>
+                </div>
+                
+                <div class="terminal-footer">
+                    <span class="quick-cmd-label"><i class="fas fa-bolt"></i> Quick Commands:</span>
+                    <div class="quick-cmd-buttons">
+                        <button class="cmd-btn" data-cmd="help">help</button>
+                        <button class="cmd-btn" data-cmd="skills">skills</button>
+                        <button class="cmd-btn" data-cmd="projects">projects</button>
+                        <button class="cmd-btn" data-cmd="api -test">api -test</button>
+                        <button class="cmd-btn" data-cmd="resume">resume</button>
+                        <button class="cmd-btn" data-cmd="contact">contact</button>
+                        <button class="cmd-btn cmd-clear" data-cmd="clear">clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
-    <section id="projects" class="section">
+    <section id="projects" class="section bg-alt">
         <h2 class="section-title fade-in">Projects</h2>
         <div class="projects-grid">
             <div class="project-card fade-in">
@@ -147,7 +198,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="section bg-alt">
+    <section id="experience" class="section">
         <h2 class="section-title fade-in">Experience</h2>
         <div class="timeline">
             <div class="timeline-item fade-in">
@@ -167,7 +218,7 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="section">
+    <section id="education" class="section bg-alt">
         <h2 class="section-title fade-in">Education & Certifications</h2>
         <div class="timeline">
             <div class="timeline-item fade-in">
@@ -194,7 +245,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section bg-alt">
+    <section id="contact" class="section">
         <div class="contact-card fade-in">
             <h2>Let's Connect</h2>
             <p>I'm currently looking for new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
@@ -209,7 +260,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="bg-alt">
         <p>&copy; 2026 Vijayakumar M. Built with HTML, CSS & JS.</p>
     </footer>
 
