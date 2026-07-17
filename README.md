@@ -72,7 +72,7 @@ A robust backend for an e-commerce platform featuring JWT-based authentication, 
 ## 📊 GitHub Analytics
 
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=vijayakumardevforge&theme=radical" alt="Vijay's GitHub Stats" />
+  <!-- <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=vijayakumardevforge&theme=radical" alt="Vijay's GitHub Stats" /> -->
   <img src="https://streak-stats.demolab.com/?user=vijayakumardevforge&theme=radical" alt="Vijay's GitHub Streak"/>
 </div>
 
